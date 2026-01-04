@@ -1,0 +1,11 @@
+.hero-wrapper {
+	position: relative;
+	overflow: hidden
+}
+
+@media screen and (max-width: 736px) {
+    .hero-component_productGallery__L4hQh {
+	height: 100vh; /* full viewport height */
+	min-height: 400px; /* Minimum height for small screens */
+    }
+}
