@@ -9,3 +9,11 @@
 	min-height: 400px; /* Minimum height for small screens */
     }
 }
+@media (max-width: 768px) {
+  .hide-on-mobile {
+    display: none;
+  }
+  .hero-component_overlay__koYq_ {
+    top: 15%;
+  }
+}

@@ -144,12 +144,12 @@ export default function Hero() {
               ))}
             </span>
           </h2>
-          <p className="hero-component_subheading__zYqxz hero-component_title-char__UAF2P">
+          <p className="hero-component_subheading__zYqxz hero-component_title-char__UAF2P hide-on-mobile">
             Available for adoption at Toronto Humane Society.
           </p>
         </div>
         
-        <div className="hero-component_buttonGroup__h2XxF">
+        <div className="hero-component_buttonGroup__h2XxF hide-on-mobile">
           <div className="hero-component_actionButtons__R4u_X">
             <a 
               className="button_button__ppN__ hero-component_buttonaction__BrcDS button_buttonOutline__S2z23"
