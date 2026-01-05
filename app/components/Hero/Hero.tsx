@@ -28,6 +28,24 @@ export default function Hero() {
                   src="https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767565733/IMG_6940_bp1zku.mp4"
                   poster="todo.jpg"
                 />
+
+                <VideoPlayer
+                  src="https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767584670/IMG_6761_hup6qv.mp4"
+                  poster="todo.jpg"
+                />
+                <VideoPlayer
+                  src="https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767584670/IMG_6798_youifd.mp4"
+                  poster="todo.jpg"
+                />
+                <VideoPlayer
+                  src="https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767584670/IMG_6587_eyks7g.mp4"
+                  poster="todo.jpg"
+                />
+                <VideoPlayer
+                  src="https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767584670/IMG_6693_vmg0po.mp4"
+                  poster="todo.jpg"
+                />
+
               </Carousel>
             </div>
           </div>
