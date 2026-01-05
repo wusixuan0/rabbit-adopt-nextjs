@@ -6,6 +6,7 @@ import './styles/hero.css'
 
 import { Carousel } from 'nuka-carousel';
 import VideoPlayer from './VideoPlayer'
+import CustomArrows from './CustomArrows'
 
 export default function Hero() {
   return (
@@ -14,7 +15,11 @@ export default function Hero() {
         <div>
           <div>
             <div className="hero-component_productGallery__L4hQh" style={{ '--headerHeightHero': '149px' } as React.CSSProperties}>
-              <Carousel showDots showArrows wrapMode="wrap">
+              
+              <Carousel 
+                showArrows arrows={<CustomArrows />}
+                // wrapMode="wrap"
+              >
                 <VideoPlayer
                   src="https://res.cloudinary.com/dcq4tnjgj/video/upload/IMG_6923_how5ta.mp4"
                   poster="todo.jpg"
