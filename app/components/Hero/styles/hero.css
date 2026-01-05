@@ -17,3 +17,25 @@
     top: 15%;
   }
 }
+
+/* Nuka Carousel fixes */
+.nuka-container,
+.nuka-slide-container,
+.nuka-overflow,
+.nuka-wrapper {
+  height: 100%;
+}
+
+/* fix Videos Side-by-Side After Adding Carousel */
+.hero-component_mediaWrapper__h9ZA6 {
+  min-width: 100vw;  /* or 100% */
+  width: 100vw;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+/* 让 wrapper 不要自动 fit content */
+.nuka-wrapper {
+  display: flex;
+  height: 100%;
+}
