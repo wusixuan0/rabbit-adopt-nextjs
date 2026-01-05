@@ -14,7 +14,9 @@
     display: none;
   }
   .hero-component_overlay__koYq_ {
-    top: 15%;
+    top: 6%;
+    font-size: 50px;
+
   }
 }
 
@@ -63,4 +65,40 @@
   flex-shrink: 0;
   height: 100%;
   transition: opacity 0.3s ease;
+}
+
+/* Mobile button styling */
+@media (max-width: 768px) {
+  .hero-component_buttonGroup__h2XxF {
+    display: block !important; /* 覆盖 hide-on-mobile */
+  }
+  
+  .hero-component_actionButtons__R4u_X {
+    position: absolute;
+    left: 2rem;
+    right: 0.75rem;
+    margin: 0;
+    flex-direction: row;
+    gap: 0.5rem;
+    z-index: 2; /* 跟 nav arrows 一样的 z-index */
+  }
+  
+  .hero-component_buttonGroup__h2XxF .hero-component_buttonaction__BrcDS {
+    /* 变成像 nav arrows 的小按钮 */
+    height: 2.5rem; /* 跟 nav 一样高 */
+    padding: 0 1rem;
+    font-size: 0.75rem; /* 小一点的字体 */
+    background: none;
+    border:1px solid white;
+    /* backdrop-filter: blur(2px); 毛玻璃效果 */
+    color: var(--lll-color-text-inverse); /* 白色文字 */
+    border-radius: 6.25rem; /* 圆角 */
+    white-space: nowrap; /* 文字不换行 */
+    overflow: hidden;
+    text-overflow: ellipsis; /* 太长的话显示... */
+  }
+  
+  .hero-component_buttonGroup__h2XxF .hero-component_buttonaction__BrcDS:hover {
+    background: var(--lll-color-background-off-black-66); /* mobile 上不需要 hover 效果 */
+  }
 }
