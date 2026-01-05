@@ -30,10 +30,12 @@ export default function Hero() {
                 />
 
                 <VideoPlayer
+                  className="customPosition"
                   src="https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767584670/IMG_6761_hup6qv.mp4"
                   poster="todo.jpg"
                 />
                 <VideoPlayer
+                  className="customPosition"
                   src="https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767584670/IMG_6798_youifd.mp4"
                   poster="todo.jpg"
                 />
@@ -102,6 +104,8 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+
     </div>
   )
 }

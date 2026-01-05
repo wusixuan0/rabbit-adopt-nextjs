@@ -7,9 +7,10 @@ import { useEffect, useRef, useState } from 'react'
 interface VideoPlayerProps {
   src: string
   poster: string
+  className?: string
 }
 
-export default function VideoPlayer({ src, poster }: VideoPlayerProps) {
+export default function VideoPlayer({ src, poster, className }: VideoPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [isPlaying, setIsPlaying] = useState(true)
 
@@ -54,7 +55,7 @@ export default function VideoPlayer({ src, poster }: VideoPlayerProps) {
             <div className="video-player_videoPlayerContainer__gSoaQ video-player_aspectRatio-16-9__7a3dk">
               <video
                 ref={videoRef}
-                className="video-player_videoPlayer__1BpuJ video-player_aspectRatio-16-9__7a3dk"
+                className={`video-player_videoPlayer__1BpuJ video-player_aspectRatio-16-9__7a3dk ${className}`}
                 playsInline
                 poster={poster}
                 autoPlay

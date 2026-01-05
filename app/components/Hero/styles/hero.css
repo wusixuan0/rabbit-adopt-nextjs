@@ -75,8 +75,8 @@
   
   .hero-component_actionButtons__R4u_X {
     position: absolute;
-    left: 2rem;
-    right: 0.75rem;
+    left: 50%; /* move left edge to center */
+    transform: translateX(-50%); /* shift back by half its width */
     margin: 0;
     flex-direction: row;
     gap: 0.5rem;
@@ -100,5 +100,13 @@
   
   .hero-component_buttonGroup__h2XxF .hero-component_buttonaction__BrcDS:hover {
     background: var(--lll-color-background-off-black-66); /* mobile 上不需要 hover 效果 */
+  }
+}
+
+/* video position, zoom in & move down */
+@media (max-width: 543px) {
+  .customPosition {
+    object-position: center -180%;
+    transform: scale(1.42);
   }
 }
