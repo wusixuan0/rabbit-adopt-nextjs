@@ -8,21 +8,36 @@ interface VideoPlayerProps {
   src: string
   poster: string
   className?: string
+  isActive?: boolean
 }
 
-export default function VideoPlayer({ src, poster, className }: VideoPlayerProps) {
+export default function VideoPlayer({ src, poster, className, isActive = false }: VideoPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null)
-  const [isPlaying, setIsPlaying] = useState(true)
+  const [isPlaying, setIsPlaying] = useState(false)
 
+  // 新加的：监听 isActive 变化
   useEffect(() => {
     const video = videoRef.current
     if (!video) return
 
-    video.muted = true
-    video.play().catch(err => {
-      console.log('Autoplay failed:', err)
+    if (isActive) {
+      // 当前 slide：播放视频
+      video.muted = true
+      video.play().catch(err => {
+        console.log('Autoplay failed:', err)
+        setIsPlaying(false)
+      })
+    } else {
+      // 不是当前 slide：暂停视频
+      video.pause()
       setIsPlaying(false)
-    })
+    }
+  }, [isActive])  // watch isActive
+
+  // 原来的 useEffect：设置 event listeners
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
 
     const handlePlay = () => setIsPlaying(true)
     const handlePause = () => setIsPlaying(false)
@@ -55,10 +70,9 @@ export default function VideoPlayer({ src, poster, className }: VideoPlayerProps
             <div className="video-player_videoPlayerContainer__gSoaQ video-player_aspectRatio-16-9__7a3dk">
               <video
                 ref={videoRef}
-                className={`video-player_videoPlayer__1BpuJ video-player_aspectRatio-16-9__7a3dk ${className}`}
+                className={`video-player_videoPlayer__1BpuJ video-player_aspectRatio-16-9__7a3dk ${className || ''}`}
                 playsInline
                 poster={poster}
-                autoPlay
                 loop
                 muted
                 controlsList="nodownload noremoteplayback novolume"

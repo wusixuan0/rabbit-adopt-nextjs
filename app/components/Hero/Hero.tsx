@@ -4,11 +4,41 @@ import './styles/9852d7ed31ea3fd9.css'
 import './styles/85513d82727bb32e.css'
 import './styles/hero.css'
 
-import { Carousel } from 'nuka-carousel';
-import VideoPlayer from './VideoPlayer'
+import { Carousel } from 'nuka-carousel'
 import CustomArrows from './CustomArrows'
+import VideoCarouselContent from './VideoCarouselContent'  // 新的！
 
 export default function Hero() {
+  // 把视频数据提取出来
+  const videos = [
+    {
+      src: "https://res.cloudinary.com/dcq4tnjgj/video/upload/IMG_6923_how5ta.mp4",
+      poster: "todo.jpg"
+    },
+    {
+      src: "https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767565733/IMG_6940_bp1zku.mp4",
+      poster: "todo.jpg"
+    },
+    {
+      src: "https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767584670/IMG_6761_hup6qv.mp4",
+      poster: "todo.jpg",
+      className: "customPosition"
+    },
+    {
+      src: "https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767584670/IMG_6798_youifd.mp4",
+      poster: "todo.jpg",
+      className: "customPosition"
+    },
+    {
+      src: "https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767584670/IMG_6587_eyks7g.mp4",
+      poster: "todo.jpg"
+    },
+    {
+      src: "https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767584670/IMG_6693_vmg0po.mp4",
+      poster: "todo.jpg"
+    }
+  ]
+
   return (
     <div className="hero-wrapper">
       <div>
@@ -17,37 +47,13 @@ export default function Hero() {
             <div className="hero-component_productGallery__L4hQh" style={{ '--headerHeightHero': '149px' } as React.CSSProperties}>
               
               <Carousel 
-                showArrows arrows={<CustomArrows />}
+                initialPage={0}
+                showArrows 
+                arrows={<CustomArrows />}
                 // wrapMode="wrap"
               >
-                <VideoPlayer
-                  src="https://res.cloudinary.com/dcq4tnjgj/video/upload/IMG_6923_how5ta.mp4"
-                  poster="todo.jpg"
-                />
-                <VideoPlayer
-                  src="https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767565733/IMG_6940_bp1zku.mp4"
-                  poster="todo.jpg"
-                />
-
-                <VideoPlayer
-                  className="customPosition"
-                  src="https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767584670/IMG_6761_hup6qv.mp4"
-                  poster="todo.jpg"
-                />
-                <VideoPlayer
-                  className="customPosition"
-                  src="https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767584670/IMG_6798_youifd.mp4"
-                  poster="todo.jpg"
-                />
-                <VideoPlayer
-                  src="https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767584670/IMG_6587_eyks7g.mp4"
-                  poster="todo.jpg"
-                />
-                <VideoPlayer
-                  src="https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767584670/IMG_6693_vmg0po.mp4"
-                  poster="todo.jpg"
-                />
-
+                {/* 用新的 wrapper component */}
+                <VideoCarouselContent videos={videos} />
               </Carousel>
             </div>
           </div>
