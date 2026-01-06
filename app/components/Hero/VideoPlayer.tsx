@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from 'react'
 
 interface VideoPlayerProps {
   src: string
-  poster: string
+  poster?: string
   className?: string
   isActive?: boolean
 }
@@ -72,7 +72,7 @@ export default function VideoPlayer({ src, poster, className, isActive = false }
                 ref={videoRef}
                 className={`video-player_videoPlayer__1BpuJ video-player_aspectRatio-16-9__7a3dk ${className || ''}`}
                 playsInline
-                poster={poster}
+                {...(poster && { poster })} // Spread operator with conditional object
                 loop
                 muted
                 controlsList="nodownload noremoteplayback novolume"

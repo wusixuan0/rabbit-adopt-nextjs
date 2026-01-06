@@ -6,36 +6,32 @@ import './styles/hero.css'
 
 import { Carousel } from 'nuka-carousel'
 import CustomArrows from './CustomArrows'
-import VideoCarouselContent from './VideoCarouselContent'  // 新的！
+import VideoCarouselContent from './VideoCarouselContent'
 
 export default function Hero() {
   // 把视频数据提取出来
   const videos = [
     {
       src: "https://res.cloudinary.com/dcq4tnjgj/video/upload/IMG_6923_how5ta.mp4",
-      poster: "todo.jpg"
+      poster: "https://res.cloudinary.com/dcq4tnjgj/image/upload/v1767666246/loki-1_gwfqzq.jpg"
     },
     {
       src: "https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767565733/IMG_6940_bp1zku.mp4",
-      poster: "todo.jpg"
     },
     {
       src: "https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767584670/IMG_6761_hup6qv.mp4",
-      poster: "todo.jpg",
       className: "customPosition"
     },
     {
       src: "https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767584670/IMG_6798_youifd.mp4",
-      poster: "todo.jpg",
       className: "customPosition"
     },
     {
       src: "https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767584670/IMG_6587_eyks7g.mp4",
-      poster: "todo.jpg"
     },
+    { src: "https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767667326/IMG_6908_iaixju.mp4" },
     {
       src: "https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767584670/IMG_6693_vmg0po.mp4",
-      poster: "todo.jpg"
     }
   ]
 
