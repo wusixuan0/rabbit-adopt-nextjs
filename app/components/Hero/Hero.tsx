@@ -17,21 +17,29 @@ export default function Hero() {
     },
     {
       src: "https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767565733/IMG_6940_bp1zku.mp4",
+      poster: "https://res.cloudinary.com/dcq4tnjgj/image/upload/v1767666246/loki-1_gwfqzq.jpg"
     },
     {
       src: "https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767584670/IMG_6761_hup6qv.mp4",
+      poster: "https://res.cloudinary.com/dcq4tnjgj/image/upload/v1767666246/loki-1_gwfqzq.jpg",
       className: "customPosition"
     },
     {
       src: "https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767584670/IMG_6798_youifd.mp4",
+      poster: "https://res.cloudinary.com/dcq4tnjgj/image/upload/v1767666246/loki-1_gwfqzq.jpg",
       className: "customPosition"
     },
     {
       src: "https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767584670/IMG_6587_eyks7g.mp4",
+      poster: "https://res.cloudinary.com/dcq4tnjgj/image/upload/v1767666246/loki-1_gwfqzq.jpg",
     },
-    { src: "https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767667326/IMG_6908_iaixju.mp4" },
+    {
+      src: "https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767667326/IMG_6908_iaixju.mp4",
+      poster: "https://res.cloudinary.com/dcq4tnjgj/image/upload/v1767666246/loki-1_gwfqzq.jpg",
+    },
     {
       src: "https://res.cloudinary.com/dcq4tnjgj/video/upload/v1767584670/IMG_6693_vmg0po.mp4",
+      poster: "https://res.cloudinary.com/dcq4tnjgj/image/upload/v1767666246/loki-1_gwfqzq.jpg",
     }
   ]
 
