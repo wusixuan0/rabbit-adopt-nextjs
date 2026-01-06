@@ -7,9 +7,9 @@ import './styles/hero.css'
 import { Carousel } from 'nuka-carousel'
 import CustomArrows from './CustomArrows'
 import VideoCarouselContent from './VideoCarouselContent'
+import OverlayContent from './OverlayContent'
 
 export default function Hero() {
-  // 把视频数据提取出来
   const videos = [
     {
       src: "https://res.cloudinary.com/dcq4tnjgj/video/upload/IMG_6923_how5ta.mp4",
@@ -43,6 +43,37 @@ export default function Hero() {
     }
   ]
 
+  const overlayTexts = [
+    {
+      title: "Adopt Loki",
+      subtitle: "Available for adoption at Toronto Humane Society."
+    },
+    {
+      title: "Affectionate",
+      subtitle: "Watch him melts into a puddle when you gentle head pets him."
+    },
+    {
+      title: "Confident",
+      subtitle: "Loki has opinions and will express them. If you move his stuff, he'll let you know."
+    },
+    {
+      title: "Food driven",
+      subtitle: "This video is how he looks at you when you eat a banana."
+    },
+    {
+      title: "Curious",
+      subtitle: "This video took place at his second day arriving at fosters."
+    },
+    {
+      title: "Loving",
+      subtitle: "He'll be your fluffy shadow at a distance. A perfect parallel play buddy."
+    },
+    {
+      title: "Good with other pets",
+      subtitle: "But must require very gentle and slow introduction."
+    },
+  ]
+
   return (
     <div className="hero-wrapper">
       <div>
@@ -58,64 +89,13 @@ export default function Hero() {
               >
                 {/* 用新的 wrapper component */}
                 <VideoCarouselContent videos={videos} />
+                <OverlayContent texts={overlayTexts} />
               </Carousel>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Text Overlay */}
-      <div className="hero-component_overlay__koYq_ hero-component_overlayCenter__FEAsD">
-        <div>
-          <h2 className="hero-component_heading__1i1O4">
-            <span className="hero-component_title-word-container__VCFyw">
-              {['A', 'd', 'o', 'p', 't'].map((char, i) => (
-                <span 
-                  key={`adopt-${i}`}
-                  className="hero-component_title-char__UAF2P"
-                  style={{ animationDelay: `${110 + i * 10}ms` }}
-                >
-                  {char}
-                </span>
-              ))}
-              <span className="title-char" style={{ animationDelay: '150ms' }}>&nbsp;</span>
-            </span>
-            <span className="hero-component_title-word-container__VCFyw">
-              {['L', 'o', 'k', 'i'].map((char, i) => (
-                <span 
-                  key={`loki-${i}`}
-                  className="hero-component_title-char__UAF2P"
-                  style={{ animationDelay: `${160 + i * 10}ms` }}
-                >
-                  {char}
-                </span>
-              ))}
-            </span>
-          </h2>
-          <p className="hero-component_subheading__zYqxz hero-component_title-char__UAF2P">
-            Available for adoption at Toronto Humane Society.
-          </p>
-        </div>
-        
-        <div className="hero-component_buttonGroup__h2XxF hide-on-mobile">
-          <div className="hero-component_actionButtons__R4u_X">
-            <a
-              className="button_button__ppN__ hero-component_buttonaction__BrcDS button_buttonOutline__S2z23"
-              href="#about-loki"
-            >
-              About Loki
-            </a>
-            <a 
-              className="button_button__ppN__ hero-component_buttonaction__BrcDS button_buttonOutline__S2z23"
-              href="#whyimadethis"
-            >
-              How To Copy This Website
-            </a>
-          </div>
-        </div>
-      </div>
-
-
+      
     </div>
   )
 }

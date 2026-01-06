@@ -10,9 +10,6 @@
     }
 }
 @media (max-width: 768px) {
-  .hide-on-mobile {
-    display: none;
-  }
   .hero-component_overlay__koYq_ {
     top: 6%;
     font-size: 50px;
@@ -69,10 +66,6 @@
 
 /* Mobile button styling */
 @media (max-width: 768px) {
-  .hero-component_buttonGroup__h2XxF {
-    display: block !important; /* 覆盖 hide-on-mobile */
-  }
-  
   .hero-component_actionButtons__R4u_X {
     position: absolute;
     left: 50%; /* move left edge to center */
