@@ -51,7 +51,7 @@ export default function OverlayContent({ texts }: OverlayContentProps) {
         </p>
       </div>
       
-        <div className={`hero-component_buttonGroup__h2XxF ${currentPage === 0 ? '' : 'hidden'}`}>
+        <div className={`hero-component_buttonGroup__h2XxF ${currentPage === 0 ? '' : 'hidden-on-mobile'}`}>
           <div className="hero-component_actionButtons__R4u_X">
             <a
               className="button_button__ppN__ hero-component_buttonaction__BrcDS button_buttonOutline__S2z23"

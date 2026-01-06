@@ -12,7 +12,6 @@ interface VideoCarouselContentProps {
 }
 
 export default function VideoCarouselContent({ videos }: VideoCarouselContentProps) {
-  // 🎯 这个 hook 可以拿到 currentPage！
   const { currentPage } = useCarousel()
 
   // 可选：打印看看 currentPage 变化

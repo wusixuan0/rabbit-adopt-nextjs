@@ -1,7 +1,4 @@
 'use client'
-import './styles/9852d7ed31ea3fd9.css'
-import './styles/85513d82727bb32e.css'
-import './styles/hero.css'
 import { useEffect, useRef, useState } from 'react'
 
 interface VideoPlayerProps {

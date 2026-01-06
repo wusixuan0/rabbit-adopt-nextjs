@@ -1,6 +1,4 @@
 'use client'
-
-import './styles/9852d7ed31ea3fd9.css'
 import './styles/85513d82727bb32e.css'
 import './styles/hero.css'
 
@@ -69,12 +67,10 @@ export default function Hero() {
         <div>
           <div>
             <div className="hero-component_productGallery__L4hQh" style={{ '--headerHeightHero': '149px' } as React.CSSProperties}>
-              
               <Carousel 
                 initialPage={0}
                 showArrows 
                 arrows={<CustomArrows />}
-                // wrapMode="wrap"
               >
                 <VideoCarouselContent 
                   videos={slides.map(s => ({ src: s.src, poster: s.poster }))} 

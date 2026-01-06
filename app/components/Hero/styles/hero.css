@@ -92,7 +92,9 @@
   }
   
   .hero-component_buttonGroup__h2XxF .hero-component_buttonaction__BrcDS:hover {
-    background: var(--lll-color-background-off-black-66); /* mobile 上不需要 hover 效果 */
+    background: var(--lll-color-background-off-white-30);
+    backdrop-filter: blur(2px); /* 毛玻璃效果 */
+    color: white;
   }
 }
 
@@ -101,5 +103,9 @@
   .customPosition {
     object-position: center -180%;
     transform: scale(1.42);
+  }
+
+  .hidden-on-mobile {
+    display: none
   }
 }
