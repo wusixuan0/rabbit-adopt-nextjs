@@ -55,7 +55,7 @@ export default function OverlayContent({ texts }: OverlayContentProps) {
           <div className="hero-component_actionButtons__R4u_X">
             <a
               className="button_button__ppN__ hero-component_buttonaction__BrcDS button_buttonOutline__S2z23"
-              href="#about-loki"
+              href="https://www.torontohumanesociety.com/pets-details/?ID=2000330102"
             >
               About Loki
             </a>
