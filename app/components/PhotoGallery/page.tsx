@@ -10,11 +10,7 @@ interface ImageData {
   height: number
 }
 
-interface Images {
-  images: ImageData[]
-}
-
-export default function PhotoGallery({ images = imagesData }: Images) {
+export default function PhotoGallery({ images = imagesData }: { images?: ImageData[] }) {
   const visibleCount = 6
   const remainingCount = images.length - visibleCount
 
