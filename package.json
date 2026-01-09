@@ -12,8 +12,10 @@
     "@vercel/analytics": "^1.6.1",
     "next": "16.1.1",
     "nuka-carousel": "^8.2.0",
+    "photoswipe": "^5.4.4",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "react-photoswipe-gallery": "^4.0.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

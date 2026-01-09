@@ -1,0 +1,24 @@
+
+.galleryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: .5rem;
+    margin: .7rem;
+}
+
+.galleryGrid .itemContainer {
+    display: block;
+    /* overflow: hidden; */
+    /* border-radius: 8px; */
+}
+
+.galleryGrid img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.galleryGrid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
